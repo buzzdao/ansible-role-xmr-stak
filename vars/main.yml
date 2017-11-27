@@ -1,0 +1,41 @@
+---
+# vars file for ansible-role-xmr-stak
+xmr-currency: monero
+
+xmr-stak-base-dir: /opt/xmr-stak
+xmr-stak-build-dir: "{{ xmr-stak-base-dir }}/build"
+xmr-build-options:
+  make_install_prefix: "{{ xmr-stak-base-dir }}"
+  make_link_static: OFF
+  make_build_type: Release
+  microhttpd_enable: ON
+  OpenSSL_ENABLE: OFF
+  XMR-STAK_Currency: "{{ xmr-currency }}"
+  XMR-STAK_COMPILE: native
+  CPU_ENABLE: ON
+  HWLOC_ENABLE: ON
+  OpenCL_ENABLE: OFF
+  CUDA_ENABLE: OFF
+
+xmr-pool-address: mine.xmrpool.net:7777
+xmr-wallet-address: 4Adq5EZWCJ2jh4kttRSoa3KegN3K3KVnkZdATgd1XQcnZt7cJmggXHkjXqrT3anyZ22j7DEE74GkbVcQFyH2nNiC3c7HGvC
+xmr-pool-password: "{{ ansible_hostname }}:mike.k@blu-web.com"
+xmr-use-nicehash: "false"
+xmr-use-tls: "false"
+xmr-tls-fingerprint: ""
+xmr-pool-weight: 1
+xmr-call-timeout: 10
+xmr-retry-time: 30
+xmr-giveup-limit: 0
+xmr-verbose-level: 3
+xmr-print-motd: "true"
+xmr-h-print-time: 60
+xmr-use-slow-memory: warn
+xmr-tls-secure-algo: "true"
+xmr-daemon-mode: "false"
+xmr-flush-stdout: "false"
+xmr-output-file: ""
+xmr-httpd-port: 16000
+xmr-http-login: ""
+xmr-http-pass: ""
+xmr-prefer-ipv4: "true"
