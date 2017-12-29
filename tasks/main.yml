@@ -17,7 +17,7 @@
 
 - name: Download sources.
   git:
-    repo: https://github.com/fireice-uk/xmr-stak.git
+    repo: https://github.com/buzzdao/xmr-stak.git
     dest: "{{ xmr-stak-base-dir }}"
 
 - name: Create the working directory.

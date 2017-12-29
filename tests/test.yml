@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: v3
   remote_user: root
   roles:
     - ansible-role-xmr-stak
